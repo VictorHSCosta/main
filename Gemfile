@@ -43,7 +43,14 @@ gem "thruster", require: false
 # Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
 gem "tailwindcss-rails"
 
+# Use Devise for authentication [https://github.com/heartcombo/devise]
+gem "devise"
+
 group :development, :test do
+  # RSpec for testing [https://github.com/rspec/rspec-rails]
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "faker"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
