@@ -1,20 +1,242 @@
-<main class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-8">
-  <div class="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8 md:p-12">
-    <div class="text-center space-y-6">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900">
-        Aplicação Rails criada com sucesso 🎉
-      </h1>
-      <p class="text-lg md:text-xl text-gray-600">
-        Se você está lendo isto, a página inicial está funcionando.
-      </p>
-      <div class="pt-4">
-        <span class="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+<!-- Navbar -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <svg class="w-8 h-8 text-indigo-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="6" cy="12" r="1.5" fill="currentColor"/>
+          <circle cx="18" cy="12" r="1.5" fill="currentColor"/>
+        </svg>
+        <span class="text-xl font-bold text-gray-900">RailsApp</span>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#home" class="text-gray-700 hover:text-indigo-600 transition font-medium">Home</a>
+        <a href="#produtos" class="text-gray-700 hover:text-indigo-600 transition font-medium">Produtos</a>
+        <a href="#sobre" class="text-gray-700 hover:text-indigo-600 transition font-medium">Sobre</a>
+        <a href="#contato" class="text-gray-700 hover:text-indigo-600 transition font-medium">Contato</a>
+        <a href="#login" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition font-medium">
+          Login
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button class="text-gray-700 hover:text-indigo-600">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
-          Tailwind CSS ativo
-        </span>
+        </button>
       </div>
     </div>
   </div>
-</main>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center space-y-8">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+        Desenvolva Aplicações Web
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+          Poderosas e Escaláveis
+        </span>
+      </h1>
+
+      <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Nossa plataforma Rails oferece todas as ferramentas necessárias para construir,
+        escalar e manter aplicações modernas com agilidade e segurança.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+        <a href="#produtos" class="px-8 py-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+          Explore Nossos Produtos
+        </a>
+        <a href="#sobre" class="px-8 py-4 bg-white text-indigo-600 border-2 border-indigo-600 rounded-lg hover:bg-indigo-50 transition font-semibold text-lg shadow-md">
+          Saiba Mais
+        </a>
+      </div>
+
+      <!-- Hero Illustration -->
+      <div class="pt-8">
+        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-8">
+          <svg class="w-full h-48" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="50" y="80" width="700" height="40" rx="20" fill="#E0E7FF"/>
+            <rect x="50" y="80" width="500" height="40" rx="20" fill="#818CF8"/>
+            <circle cx="100" cy="100" r="15" fill="#4F46E5"/>
+            <circle cx="300" cy="100" r="15" fill="#4F46E5"/>
+            <circle cx="500" cy="100" r="15" fill="#4F46E5"/>
+            <circle cx="700" cy="100" r="15" fill="#C7D2FE"/>
+            <path d="M100 100L300 100L500 100L700 100" stroke="#4F46E5" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section id="produtos" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+        Por Que Escolher Nossa Plataforma?
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Recursos poderosos que aceleram seu desenvolvimento e garantem a qualidade do seu projeto
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card 1: Desenvolvimento Rápido -->
+      <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition transform hover:-translate-y-1 border border-gray-100">
+        <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Desenvolvimento Rápido</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Framework Convention over Configuration que acelera o desenvolvimento com código limpo e reutilizável.
+        </p>
+      </div>
+
+      <!-- Card 2: Escalabilidade -->
+      <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition transform hover:-translate-y-1 border border-gray-100">
+        <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Escalabilidade</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Arquitetura preparada para crescer com seu negócio, desde startups até aplicações enterprise.
+        </p>
+      </div>
+
+      <!-- Card 3: Comunidade Ativa -->
+      <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition transform hover:-translate-y-1 border border-gray-100">
+        <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Comunidade Ativa</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Milhares de desenvolvedores contribuindo com gems, tutoriais e suporte constante.
+        </p>
+      </div>
+
+      <!-- Card 4: Segurança Robusta -->
+      <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition transform hover:-translate-y-1 border border-gray-100">
+        <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Segurança Robusta</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Proteção integrada contra SQL injection, XSS, CSRF e outras vulnerabilidades comuns.
+        </p>
+      </div>
+
+      <!-- Card 5: API Moderna -->
+      <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition transform hover:-translate-y-1 border border-gray-100">
+        <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">API Moderna</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Criação rápida de APIs RESTful e GraphQL para integração com apps mobile e SPAs.
+        </p>
+      </div>
+
+      <!-- Card 6: Suporte Completo -->
+      <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition transform hover:-translate-y-1 border border-gray-100">
+        <div class="w-14 h-14 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Suporte Completo</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Documentação extensa, ferramentas de debugging e ecossistema maduro para todos os desafios.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <!-- Company Info -->
+      <div class="col-span-1 md:col-span-2">
+        <div class="flex items-center space-x-2 mb-4">
+          <svg class="w-8 h-8 text-indigo-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="6" cy="12" r="1.5" fill="currentColor"/>
+            <circle cx="18" cy="12" r="1.5" fill="currentColor"/>
+          </svg>
+          <span class="text-xl font-bold text-white">RailsApp</span>
+        </div>
+        <p class="text-gray-400 leading-relaxed max-w-md">
+          Plataforma completa para desenvolvimento de aplicações web modernas, escaláveis e seguras com Ruby on Rails.
+        </p>
+      </div>
+
+      <!-- Links Úteis -->
+      <div>
+        <h3 class="text-white font-bold mb-4">Links Úteis</h3>
+        <ul class="space-y-2">
+          <li><a href="#sobre" class="hover:text-indigo-400 transition">Sobre Nós</a></li>
+          <li><a href="#produtos" class="hover:text-indigo-400 transition">Produtos</a></li>
+          <li><a href="#termos" class="hover:text-indigo-400 transition">Termos de Uso</a></li>
+          <li><a href="#privacidade" class="hover:text-indigo-400 transition">Política de Privacidade</a></li>
+        </ul>
+      </div>
+
+      <!-- Suporte -->
+      <div>
+        <h3 class="text-white font-bold mb-4">Suporte</h3>
+        <ul class="space-y-2">
+          <li><a href="#faq" class="hover:text-indigo-400 transition">FAQ</a></li>
+          <li><a href="#contato" class="hover:text-indigo-400 transition">Contato</a></li>
+          <li><a href="#documentacao" class="hover:text-indigo-400 transition">Documentação</a></li>
+          <li><a href="#status" class="hover:text-indigo-400 transition">Status</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Social Media & Copyright -->
+    <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      <p class="text-gray-400 text-sm">
+        © <%= Time.current.year %> RailsApp. Todos os direitos reservados.
+      </p>
+
+      <div class="flex space-x-6">
+        <a href="#github" class="text-gray-400 hover:text-indigo-400 transition" aria-label="GitHub">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+          </svg>
+        </a>
+        <a href="#twitter" class="text-gray-400 hover:text-indigo-400 transition" aria-label="Twitter">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+          </svg>
+        </a>
+        <a href="#linkedin" class="text-gray-400 hover:text-indigo-400 transition" aria-label="LinkedIn">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
