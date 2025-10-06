@@ -1,20 +1,518 @@
-<main class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-8">
-  <div class="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8 md:p-12">
-    <div class="text-center space-y-6">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900">
-        Aplicação Rails criada com sucesso 🎉
-      </h1>
-      <p class="text-lg md:text-xl text-gray-600">
-        Se você está lendo isto, a página inicial está funcionando.
-      </p>
-      <div class="pt-4">
-        <span class="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-          </svg>
-          Tailwind CSS ativo
-        </span>
+<% content_for :title, "Market Place - Sua plataforma de compras online" %>
+
+<!-- Navigation -->
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex items-center">
+        <h1 class="text-2xl font-bold text-indigo-600">Market Place</h1>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#features" class="text-gray-600 hover:text-indigo-600 transition-colors">Recursos</a>
+        <a href="#benefits" class="text-gray-600 hover:text-indigo-600 transition-colors">Benefícios</a>
+        <a href="#testimonials" class="text-gray-600 hover:text-indigo-600 transition-colors">Depoimentos</a>
+        <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition-colors">Contato</a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors font-medium">Entrar</a>
+        <a href="#" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors font-medium">Cadastrar</a>
       </div>
     </div>
   </div>
-</main>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-indigo-50 via-white to-purple-50 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-8">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+          </svg>
+          Novo: Frete grátis em compras acima de R$ 150
+        </div>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+          Sua plataforma de <span class="text-indigo-600">compras online</span> completa
+        </h1>
+
+        <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+          Descubra milhares de produtos com os melhores preços, entrega rápida e segura. Compre com confiança no maior marketplace do Brasil.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#" class="inline-flex items-center justify-center px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            Começar agora
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+          <a href="#features" class="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all border-2 border-gray-200">
+            Saiba mais
+          </a>
+        </div>
+
+        <div class="flex items-center gap-8 pt-4">
+          <div class="flex -space-x-2">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-400 to-purple-400 border-2 border-white"></div>
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 border-2 border-white"></div>
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-red-400 border-2 border-white"></div>
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-400 to-orange-400 border-2 border-white"></div>
+          </div>
+          <div>
+            <p class="font-bold text-gray-900">+50.000 clientes</p>
+            <p class="text-sm text-gray-600">confiaram em nós</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative hidden md:block">
+        <div class="relative z-10">
+          <div class="bg-white rounded-2xl shadow-2xl p-8 transform hover:scale-105 transition-transform duration-300">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl"></div>
+              <div class="flex-1">
+                <div class="h-3 bg-gray-200 rounded-full w-3/4 mb-2"></div>
+                <div class="h-3 bg-gray-200 rounded-full w-1/2"></div>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div class="h-2 bg-gray-100 rounded-full"></div>
+              <div class="h-2 bg-gray-100 rounded-full w-5/6"></div>
+              <div class="h-2 bg-gray-100 rounded-full w-4/6"></div>
+            </div>
+            <div class="mt-6 flex gap-3">
+              <div class="h-10 bg-indigo-600 rounded-lg flex-1"></div>
+              <div class="h-10 bg-gray-200 rounded-lg w-20"></div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-200 to-purple-200 rounded-2xl transform rotate-6 -z-10"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative elements -->
+  <div class="absolute top-20 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+  <div class="absolute top-40 left-10 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Por que escolher o Market Place?
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Oferecemos a melhor experiência de compra com recursos pensados para você
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Feature 1 -->
+      <div class="group p-8 rounded-2xl bg-gradient-to-br from-indigo-50 to-white hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Entrega Rápida</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Receba seus produtos em até 24 horas com nosso sistema de entrega expresso disponível em todo o Brasil.
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="group p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-white hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="w-14 h-14 bg-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Compra Segura</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Proteção total em todas as suas compras com certificação SSL e garantia de devolução do dinheiro.
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="group p-8 rounded-2xl bg-gradient-to-br from-pink-50 to-white hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="w-14 h-14 bg-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Melhor Preço</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Garantimos os melhores preços do mercado com cashback em todas as compras e promoções exclusivas.
+        </p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="group p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-white hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Variedade</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Milhares de produtos em diversas categorias para você encontrar exatamente o que precisa.
+        </p>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="group p-8 rounded-2xl bg-gradient-to-br from-green-50 to-white hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="w-14 h-14 bg-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Suporte 24/7</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Atendimento disponível a qualquer hora para ajudar com suas dúvidas e problemas rapidamente.
+        </p>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="group p-8 rounded-2xl bg-gradient-to-br from-yellow-50 to-white hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="w-14 h-14 bg-yellow-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Devolução Fácil</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Não gostou? Devolva em até 30 dias sem complicação e receba seu dinheiro de volta.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section id="benefits" class="py-20 bg-gradient-to-br from-indigo-600 to-purple-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6 text-white">
+        <h2 class="text-3xl md:text-4xl font-bold">
+          Transforme sua experiência de compras
+        </h2>
+        <p class="text-lg text-indigo-100 leading-relaxed">
+          Junte-se a milhares de clientes satisfeitos que já descobriram a facilidade e segurança de comprar no Market Place.
+        </p>
+
+        <div class="space-y-4 pt-4">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mt-1">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Sem taxas escondidas</h3>
+              <p class="text-indigo-100">O preço que você vê é o preço que você paga. Transparência total.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mt-1">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Programa de fidelidade</h3>
+              <p class="text-indigo-100">Ganhe pontos a cada compra e troque por descontos e produtos.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mt-1">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">App mobile disponível</h3>
+              <p class="text-indigo-100">Compre de onde estiver com nosso aplicativo iOS e Android.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6">
+          <a href="#" class="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-50 transition-all shadow-lg">
+            Começar gratuitamente
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+            <div class="text-4xl font-bold text-white mb-2">98%</div>
+            <p class="text-indigo-100">Satisfação dos clientes</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mt-8">
+            <div class="text-4xl font-bold text-white mb-2">50K+</div>
+            <p class="text-indigo-100">Clientes ativos</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+            <div class="text-4xl font-bold text-white mb-2">100K+</div>
+            <p class="text-indigo-100">Produtos vendidos</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mt-8">
+            <div class="text-4xl font-bold text-white mb-2">24/7</div>
+            <p class="text-indigo-100">Suporte disponível</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        O que nossos clientes dizem
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Veja os depoimentos de quem já confia no Market Place
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Testimonial 1 -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+        <div class="flex gap-1 mb-4">
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+        </div>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          "Excelente plataforma! A entrega foi super rápida e o produto veio exatamente como descrito. Já virei cliente fiel!"
+        </p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-indigo-400 to-purple-400 rounded-full"></div>
+          <div>
+            <p class="font-semibold text-gray-900">Maria Silva</p>
+            <p class="text-sm text-gray-500">Cliente há 2 anos</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+        <div class="flex gap-1 mb-4">
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+        </div>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          "Melhor marketplace que já usei! Preços justos, variedade incrível e o atendimento é nota 10. Super recomendo!"
+        </p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full"></div>
+          <div>
+            <p class="font-semibold text-gray-900">João Santos</p>
+            <p class="text-sm text-gray-500">Cliente há 1 ano</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+        <div class="flex gap-1 mb-4">
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+        </div>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          "Comprei diversos produtos e todos chegaram perfeitos. O programa de fidelidade é um diferencial incrível!"
+        </p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-pink-400 to-red-400 rounded-full"></div>
+          <div>
+            <p class="font-semibold text-gray-900">Ana Costa</p>
+            <p class="text-sm text-gray-500">Cliente há 3 anos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+      Pronto para começar suas compras?
+    </h2>
+    <p class="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+      Cadastre-se agora e ganhe 10% de desconto na sua primeira compra!
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#" class="inline-flex items-center justify-center px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+        Criar conta grátis
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+        </svg>
+      </a>
+      <a href="#" class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-semibold rounded-lg border-2 border-white hover:bg-white/10 transition-all">
+        Ver produtos em destaque
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="bg-gray-900 text-gray-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <!-- Company Info -->
+      <div class="space-y-4">
+        <h3 class="text-2xl font-bold text-white">Market Place</h3>
+        <p class="text-gray-400">
+          Sua plataforma de compras online completa e confiável.
+        </p>
+        <div class="flex gap-4">
+          <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-indigo-600 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-indigo-600 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+          </a>
+          <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-indigo-600 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Products -->
+      <div>
+        <h4 class="font-semibold text-white mb-4">Produtos</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Eletrônicos</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Moda</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Casa e Decoração</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Esportes</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Livros</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h4 class="font-semibold text-white mb-4">Empresa</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Carreiras</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Blog</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Imprensa</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Parcerias</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h4 class="font-semibold text-white mb-4">Suporte</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Central de Ajuda</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Rastreamento</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Devoluções</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">Fale Conosco</a></li>
+          <li><a href="#" class="hover:text-indigo-400 transition-colors">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-400 text-sm mb-4 md:mb-0">
+        © 2024 Market Place. Todos os direitos reservados.
+      </p>
+      <div class="flex gap-6 text-sm">
+        <a href="#" class="hover:text-indigo-400 transition-colors">Termos de Uso</a>
+        <a href="#" class="hover:text-indigo-400 transition-colors">Política de Privacidade</a>
+        <a href="#" class="hover:text-indigo-400 transition-colors">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Custom animations -->
+<style>
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
