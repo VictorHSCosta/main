@@ -1,0 +1,81 @@
+<nav class="bg-white shadow-lg" data-controller="navbar">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <!-- Logo e Nome -->
+      <div class="flex items-center">
+        <a href="/" class="flex items-center">
+          <svg class="h-8 w-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+          </svg>
+          <span class="ml-2 text-xl font-bold text-gray-900">Market Place</span>
+        </a>
+      </div>
+
+      <!-- Menu Desktop -->
+      <div class="hidden md:flex md:items-center md:space-x-8">
+        <a href="/" class="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium transition-colors">
+          Home
+        </a>
+        <a href="#categorias" class="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium transition-colors">
+          Categorias
+        </a>
+        <a href="#sobre" class="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium transition-colors">
+          Sobre
+        </a>
+        <a href="#contato" class="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium transition-colors">
+          Contato
+        </a>
+      </div>
+
+      <!-- Botões de Ação Desktop -->
+      <div class="hidden md:flex md:items-center md:space-x-4">
+        <a href="#login" class="text-gray-700 hover:text-indigo-600 px-4 py-2 text-sm font-medium transition-colors">
+          Entrar
+        </a>
+        <a href="#cadastro" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+          Cadastrar
+        </a>
+      </div>
+
+      <!-- Botão Menu Mobile -->
+      <div class="flex items-center md:hidden">
+        <button
+          type="button"
+          class="text-gray-700 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+          data-action="click->navbar#toggleMenu"
+          aria-label="Menu"
+        >
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div class="md:hidden hidden" data-navbar-target="menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+      <a href="/" class="block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 px-3 py-2 rounded-md text-base font-medium">
+        Home
+      </a>
+      <a href="#categorias" class="block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 px-3 py-2 rounded-md text-base font-medium">
+        Categorias
+      </a>
+      <a href="#sobre" class="block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 px-3 py-2 rounded-md text-base font-medium">
+        Sobre
+      </a>
+      <a href="#contato" class="block text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 px-3 py-2 rounded-md text-base font-medium">
+        Contato
+      </a>
+      <div class="pt-4 pb-2 border-t border-gray-200 space-y-2">
+        <a href="#login" class="block text-center text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 px-3 py-2 rounded-md text-base font-medium">
+          Entrar
+        </a>
+        <a href="#cadastro" class="block text-center bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded-md text-base font-medium">
+          Cadastrar
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
