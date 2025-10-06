@@ -1,20 +1,295 @@
-<main class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-8">
-  <div class="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8 md:p-12">
-    <div class="text-center space-y-6">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900">
-        Aplicação Rails criada com sucesso 🎉
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 text-white overflow-hidden">
+  <div class="absolute inset-0 bg-black opacity-20"></div>
+  <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIxIDEuNzktNCA0LTRzNCAxLjc5IDQgNC0xLjc5IDQtNCA0LTQtMS43OS00LTR6bTAtMTBjMC0yLjIxIDEuNzktNCA0LTRzNCAxLjc5IDQgNC0xLjc5IDQtNCA0LTQtMS43OS00LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-10"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+        Bem-vindo ao Seu <span class="text-yellow-300">Futuro Digital</span>
       </h1>
-      <p class="text-lg md:text-xl text-gray-600">
-        Se você está lendo isto, a página inicial está funcionando.
+      <p class="text-xl sm:text-2xl text-blue-100 mb-10 max-w-3xl mx-auto leading-relaxed">
+        Transforme suas ideias em realidade com nossa plataforma inovadora. Simples, poderosa e feita para você.
       </p>
-      <div class="pt-4">
-        <span class="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-          </svg>
-          Tailwind CSS ativo
-        </span>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <%= link_to "Começar Agora", "#features", class: "inline-flex items-center px-8 py-4 border-2 border-transparent text-lg font-semibold rounded-full text-indigo-700 bg-white hover:bg-gray-50 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" %>
+        <%= link_to "Saiba Mais", "#benefits", class: "inline-flex items-center px-8 py-4 border-2 border-white text-lg font-semibold rounded-full text-white hover:bg-white hover:text-indigo-700 transition-all duration-200" %>
       </div>
     </div>
   </div>
-</main>
+
+  <!-- Wave Divider -->
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+      <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+    </svg>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        Recursos Poderosos
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Tudo que você precisa para ter sucesso, em um só lugar
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Feature 1 -->
+      <div class="group relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-blue-100">
+        <div class="absolute top-0 right-0 w-20 h-20 bg-blue-500 opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-300"></div>
+        <div class="relative">
+          <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Rápido e Eficiente</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Performance otimizada para resultados instantâneos e experiência fluida
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="group relative bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-purple-100">
+        <div class="absolute top-0 right-0 w-20 h-20 bg-purple-500 opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-300"></div>
+        <div class="relative">
+          <div class="w-14 h-14 bg-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Seguro e Confiável</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Seus dados protegidos com as melhores práticas de segurança
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="group relative bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-green-100">
+        <div class="absolute top-0 right-0 w-20 h-20 bg-green-500 opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-300"></div>
+        <div class="relative">
+          <div class="w-14 h-14 bg-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Interface Intuitiva</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Design moderno e fácil de usar, sem curva de aprendizado
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="group relative bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-orange-100">
+        <div class="absolute top-0 right-0 w-20 h-20 bg-orange-500 opacity-10 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-300"></div>
+        <div class="relative">
+          <div class="w-14 h-14 bg-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Suporte 24/7</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Equipe dedicada pronta para ajudar quando você precisar
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section id="benefits" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Left Content -->
+      <div class="order-2 lg:order-1">
+        <div class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6">
+          Por que escolher a gente?
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          Benefícios que fazem a diferença
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          Nossa plataforma foi desenvolvida pensando em você e nas suas necessidades
+        </p>
+
+        <div class="space-y-6">
+          <!-- Benefit 1 -->
+          <div class="flex items-start gap-4 group">
+            <div class="flex-shrink-0 w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Economia de Tempo</h3>
+              <p class="text-gray-600">Automatize processos e foque no que realmente importa para o seu negócio</p>
+            </div>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="flex items-start gap-4 group">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Resultados Mensuráveis</h3>
+              <p class="text-gray-600">Acompanhe métricas em tempo real e tome decisões baseadas em dados</p>
+            </div>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="flex items-start gap-4 group">
+            <div class="flex-shrink-0 w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Escalabilidade</h3>
+              <p class="text-gray-600">Cresça sem limites com uma infraestrutura que acompanha seu sucesso</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Image/Illustration -->
+      <div class="order-1 lg:order-2">
+        <div class="relative">
+          <div class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl blur-2xl opacity-20"></div>
+          <div class="relative bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-12 shadow-2xl">
+            <div class="space-y-6">
+              <!-- Stats Cards -->
+              <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-30 transform hover:scale-105 transition-transform duration-200">
+                <div class="text-4xl font-bold text-white mb-2">99.9%</div>
+                <div class="text-blue-100">Uptime garantido</div>
+              </div>
+              <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-30 transform hover:scale-105 transition-transform duration-200">
+                <div class="text-4xl font-bold text-white mb-2">10k+</div>
+                <div class="text-blue-100">Clientes satisfeitos</div>
+              </div>
+              <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-30 transform hover:scale-105 transition-transform duration-200">
+                <div class="text-4xl font-bold text-white mb-2">24/7</div>
+                <div class="text-blue-100">Suporte disponível</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="py-20 bg-gradient-to-r from-blue-600 to-indigo-700">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+      Pronto para começar sua jornada?
+    </h2>
+    <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+      Junte-se a milhares de clientes que já estão transformando seus negócios com nossa plataforma
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <%= link_to "Criar Conta Grátis", "#", class: "inline-flex items-center px-8 py-4 border-2 border-transparent text-lg font-semibold rounded-full text-indigo-700 bg-white hover:bg-gray-50 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" %>
+      <%= link_to "Falar com Especialista", "#", class: "inline-flex items-center px-8 py-4 border-2 border-white text-lg font-semibold rounded-full text-white hover:bg-white hover:text-indigo-700 transition-all duration-200" %>
+    </div>
+    <p class="text-blue-200 text-sm mt-6">
+      Sem cartão de crédito • Sem compromisso • Cancele quando quiser
+    </p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <!-- Company Info -->
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">M</span>
+          </div>
+          <span class="text-white font-bold text-xl">Main</span>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Transformando ideias em realidade digital desde 2024
+        </p>
+        <div class="flex gap-4 mt-6">
+          <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-200">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-blue-400 rounded-lg flex items-center justify-center transition-colors duration-200">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+          </a>
+          <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-colors duration-200">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-4">Empresa</h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="hover:text-white transition-colors duration-200">Sobre Nós</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-200">Carreiras</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-200">Blog</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-200">Imprensa</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-4">Recursos</h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="hover:text-white transition-colors duration-200">Documentação</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-200">API</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-200">Tutoriais</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-200">Status</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h3 class="text-white font-bold text-lg mb-4">Suporte</h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="hover:text-white transition-colors duration-200">Central de Ajuda</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-200">Contato</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-200">FAQ</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-200">Comunidade</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="border-t border-gray-800 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-400 text-sm">
+          &copy; 2024 Main. Todos os direitos reservados.
+        </p>
+        <div class="flex gap-6 text-sm">
+          <a href="#" class="hover:text-white transition-colors duration-200">Termos de Uso</a>
+          <a href="#" class="hover:text-white transition-colors duration-200">Política de Privacidade</a>
+          <a href="#" class="hover:text-white transition-colors duration-200">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
