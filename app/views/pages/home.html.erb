@@ -1,20 +1,335 @@
-<main class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-8">
-  <div class="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8 md:p-12">
-    <div class="text-center space-y-6">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900">
-        Aplicação Rails criada com sucesso 🎉
-      </h1>
-      <p class="text-lg md:text-xl text-gray-600">
-        Se você está lendo isto, a página inicial está funcionando.
-      </p>
-      <div class="pt-4">
-        <span class="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-          </svg>
-          Tailwind CSS ativo
-        </span>
+<!-- Navbar -->
+<nav class="bg-white shadow-md fixed w-full top-0 z-50" data-controller="navbar">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo e Nome -->
+      <div class="flex items-center space-x-3">
+        <%= image_tag "icon.svg", alt: "RailMarket Logo", class: "h-10 w-10" %>
+        <span class="text-xl font-bold text-gray-900">RailMarket</span>
+      </div>
+
+      <!-- Links Desktop -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Início</a>
+        <a href="#benefits" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Benefícios</a>
+        <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Sobre</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contato</a>
+        <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium shadow-md">
+          Começar Agora
+        </a>
+      </div>
+
+      <!-- Menu Mobile Button -->
+      <button data-action="click->navbar#toggle" class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none" aria-label="Abrir menu de navegação">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div data-navbar-target="menu" class="hidden md:hidden pb-4">
+      <div class="flex flex-col space-y-3">
+        <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors font-medium px-2 py-1">Início</a>
+        <a href="#benefits" class="text-gray-700 hover:text-blue-600 transition-colors font-medium px-2 py-1">Benefícios</a>
+        <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors font-medium px-2 py-1">Sobre</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors font-medium px-2 py-1">Contato</a>
+        <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center">
+          Começar Agora
+        </a>
       </div>
     </div>
   </div>
-</main>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="pt-24 pb-16 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 min-h-screen flex items-center">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center space-y-8">
+      <div class="space-y-4">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight">
+          Desenvolvimento Rails
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+            de Alta Performance
+          </span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          Transforme suas ideias em aplicações web robustas e escaláveis com o poder do Ruby on Rails
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+        <a href="#benefits" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          Descobrir Benefícios
+        </a>
+        <a href="#about" class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-all font-semibold text-lg">
+          Saiba Mais →
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 max-w-4xl mx-auto">
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <div class="text-4xl font-bold text-blue-600">10x</div>
+          <div class="text-gray-600 mt-2">Mais Rápido</div>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <div class="text-4xl font-bold text-indigo-600">99.9%</div>
+          <div class="text-gray-600 mt-2">Uptime</div>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <div class="text-4xl font-bold text-purple-600">24/7</div>
+          <div class="text-gray-600 mt-2">Suporte</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section id="benefits" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Por que escolher Rails?
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Descubra os benefícios que tornam Ruby on Rails a escolha ideal para seu próximo projeto
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 hover:shadow-xl transition-all transform hover:-translate-y-2">
+        <div class="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">Performance Otimizada</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Aplicações Rails rodando com máxima eficiência, garantindo velocidade e responsividade em cada interação
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl p-8 hover:shadow-xl transition-all transform hover:-translate-y-2">
+        <div class="bg-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">Código Limpo</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Código organizado, escalável e fácil de manter seguindo as melhores práticas da comunidade Rails
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 hover:shadow-xl transition-all transform hover:-translate-y-2">
+        <div class="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">Segurança Robusta</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Proteção avançada contra vulnerabilidades comuns com recursos de segurança integrados ao framework
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 hover:shadow-xl transition-all transform hover:-translate-y-2">
+        <div class="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">Deploy Rápido</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Processo de deploy simplificado e eficiente, colocando suas aplicações em produção em minutos
+        </p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 hover:shadow-xl transition-all transform hover:-translate-y-2">
+        <div class="bg-orange-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">Manutenção Simplificada</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Atualizações e correções realizadas com facilidade graças à arquitetura bem estruturada do Rails
+        </p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-8 hover:shadow-xl transition-all transform hover:-translate-y-2">
+        <div class="bg-pink-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">Crescimento Sustentável</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Arquitetura escalável que acompanha o crescimento do seu negócio sem comprometer a performance
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+          Sobre o RailMarket
+        </h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Somos especialistas em desenvolvimento de aplicações web com Ruby on Rails, oferecendo soluções completas para empresas que buscam excelência tecnológica.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Nossa missão é transformar ideias em produtos digitais de alta qualidade, utilizando as melhores práticas de desenvolvimento e as tecnologias mais modernas do ecossistema Rails.
+        </p>
+        <div class="pt-4">
+          <a href="#contact" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+            Entre em Contato
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <div class="space-y-6">
+          <div class="flex items-start space-x-4">
+            <div class="bg-blue-100 p-3 rounded-lg">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Experiência Comprovada</h3>
+              <p class="text-gray-600">Anos de experiência desenvolvendo aplicações Rails de sucesso</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4">
+            <div class="bg-indigo-100 p-3 rounded-lg">
+              <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Time Especializado</h3>
+              <p class="text-gray-600">Desenvolvedores certificados e apaixonados por Rails</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4">
+            <div class="bg-purple-100 p-3 rounded-lg">
+              <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Entrega Ágil</h3>
+              <p class="text-gray-600">Metodologias ágeis para resultados rápidos e eficientes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+      Pronto para começar?
+    </h2>
+    <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+      Entre em contato conosco e descubra como podemos transformar suas ideias em realidade
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="mailto:contato@railmarket.com" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg shadow-lg">
+        Enviar Email
+      </a>
+      <a href="tel:+5511999999999" class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-lg">
+        Ligar Agora
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <!-- Company Info -->
+      <div class="space-y-4">
+        <div class="flex items-center space-x-3">
+          <%= image_tag "icon.svg", alt: "RailMarket Logo", class: "h-10 w-10" %>
+          <span class="text-xl font-bold">RailMarket</span>
+        </div>
+        <p class="text-gray-400 text-sm">
+          Especialistas em desenvolvimento Ruby on Rails de alta performance
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h3 class="font-bold text-lg mb-4">Links Rápidos</h3>
+        <ul class="space-y-2">
+          <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Início</a></li>
+          <li><a href="#benefits" class="text-gray-400 hover:text-white transition-colors">Benefícios</a></li>
+          <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">Sobre</a></li>
+          <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <h3 class="font-bold text-lg mb-4">Recursos</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Documentação</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Suporte</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors">API</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div>
+        <h3 class="font-bold text-lg mb-4">Redes Sociais</h3>
+        <div class="flex space-x-4">
+          <a href="#" class="bg-gray-800 hover:bg-gray-700 p-3 rounded-lg transition-colors" aria-label="GitHub">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a href="#" class="bg-gray-800 hover:bg-gray-700 p-3 rounded-lg transition-colors" aria-label="Twitter">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+            </svg>
+          </a>
+          <a href="#" class="bg-gray-800 hover:bg-gray-700 p-3 rounded-lg transition-colors" aria-label="LinkedIn">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-gray-800 pt-8 text-center">
+      <p class="text-gray-400 text-sm">
+        &copy; <%= Time.current.year %> RailMarket. Todos os direitos reservados.
+      </p>
+    </div>
+  </div>
+</footer>
