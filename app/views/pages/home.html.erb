@@ -1,20 +1,17 @@
-<main class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-8">
-  <div class="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8 md:p-12">
-    <div class="text-center space-y-6">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900">
-        Aplicação Rails criada com sucesso 🎉
-      </h1>
-      <p class="text-lg md:text-xl text-gray-600">
-        Se você está lendo isto, a página inicial está funcionando.
-      </p>
-      <div class="pt-4">
-        <span class="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-          </svg>
-          Tailwind CSS ativo
-        </span>
-      </div>
-    </div>
-  </div>
-</main>
+<!-- Navigation Bar -->
+<%= render "pages/navbar" %>
+
+<!-- Main Content with top padding to account for fixed navbar -->
+<div class="pt-16">
+  <!-- Hero Section -->
+  <%= render "pages/hero_section" %>
+
+  <!-- Features Grid -->
+  <%= render "pages/features_grid" %>
+
+  <!-- Stats Section -->
+  <%= render "pages/stats_section" %>
+</div>
+
+<!-- Footer -->
+<%= render "pages/footer" %>
