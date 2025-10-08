@@ -9,6 +9,20 @@ Rails.application.routes.draw do
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
+  # Authentication routes
+  get "login", to: "sessions#new"
+  post "login", to: "sessions#create"
+  delete "logout", to: "sessions#destroy"
+
+  # User registration
+  get "signup", to: "users#new"
+  post "signup", to: "users#create"
+
+  # User profile and password change
+  get "profile", to: "users#show"
+  get "profile/edit", to: "users#edit", as: :edit_profile
+  patch "profile", to: "users#update"
+
   # Defines the root path route ("/")
   root "pages#home"
 end

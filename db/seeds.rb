@@ -7,3 +7,15 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+# Create a demo user for testing
+User.find_or_create_by!(email: "demo@example.com") do |user|
+  user.name = "Demo User"
+  user.password = "password123"
+  user.password_confirmation = "password123"
+end
+
+puts "✅ Seed data created successfully!"
+puts "Demo user credentials:"
+puts "  Email: demo@example.com"
+puts "  Password: password123"
