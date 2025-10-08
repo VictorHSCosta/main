@@ -1,0 +1,30 @@
+pt-BR:
+  activerecord:
+    models:
+      user: "Usuário"
+    attributes:
+      user:
+        name: "Nome"
+        email: "Email"
+        password: "Senha"
+        password_confirmation: "Confirmação de senha"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: "já está em uso"
+              invalid: "não é válido"
+            password:
+              too_short: "é muito curta (mínimo de %{count} caracteres)"
+              confirmation: "não confere com a confirmação"
+            password_confirmation:
+              confirmation: "não confere com a senha"
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"
+      long: "%d de %B de %Y às %H:%M"

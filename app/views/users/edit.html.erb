@@ -1,0 +1,60 @@
+<div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md mx-auto">
+    <div class="bg-white shadow sm:rounded-lg">
+      <div class="px-4 py-5 sm:p-6">
+        <h3 class="text-lg leading-6 font-medium text-gray-900">
+          Alterar Senha
+        </h3>
+        <div class="mt-2 max-w-xl text-sm text-gray-500">
+          <p>Digite sua senha atual e escolha uma nova senha com pelo menos 6 caracteres.</p>
+        </div>
+
+        <%= form_with model: @user, url: profile_path, method: :patch, class: "mt-5 space-y-6" do |form| %>
+          <% if @user.errors.any? %>
+            <div class="rounded-md bg-red-50 p-4">
+              <div class="flex">
+                <div class="ml-3">
+                  <h3 class="text-sm font-medium text-red-800">
+                    <%= pluralize(@user.errors.count, "erro") %> encontrado:
+                  </h3>
+                  <div class="mt-2 text-sm text-red-700">
+                    <ul class="list-disc list-inside space-y-1">
+                      <% @user.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                      <% end %>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+
+          <div>
+            <%= form.label :current_password, "Senha Atual", class: "block text-sm font-medium text-gray-700" %>
+            <%= password_field_tag "user[current_password]", nil, class: "mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm", placeholder: "Digite sua senha atual", required: true, autofocus: true %>
+            <p class="mt-2 text-sm text-gray-500">Para sua segurança, precisamos confirmar sua identidade</p>
+          </div>
+
+          <div>
+            <%= form.label :password, "Nova Senha", class: "block text-sm font-medium text-gray-700" %>
+            <%= form.password_field :password, class: "mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm", placeholder: "Mínimo 6 caracteres", required: true %>
+          </div>
+
+          <div>
+            <%= form.label :password_confirmation, "Confirme a Nova Senha", class: "block text-sm font-medium text-gray-700" %>
+            <%= form.password_field :password_confirmation, class: "mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm", placeholder: "Digite novamente a nova senha", required: true %>
+          </div>
+
+          <div class="flex items-center justify-between gap-3">
+            <%= link_to "Cancelar", profile_path, class: "inline-flex justify-center py-2 px-4 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+            <%= form.submit "Alterar Senha", class: "inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="mt-4 text-center">
+      <%= link_to "← Voltar ao Perfil", profile_path, class: "text-sm text-indigo-600 hover:text-indigo-500" %>
+    </div>
+  </div>
+</div>
