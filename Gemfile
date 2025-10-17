@@ -46,6 +46,9 @@ gem "tailwindcss-rails"
 # Inertia.js Rails adapter [https://inertiajs.com]
 gem "inertia_rails"
 
+# Pagination [https://github.com/kaminari/kaminari]
+gem "kaminari"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
@@ -55,6 +58,15 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Testing framework [https://rspec.info/]
+  gem "rspec-rails", "~> 6.1"
+
+  # Fixtures replacement [https://github.com/thoughtbot/factory_bot]
+  gem "factory_bot_rails"
+
+  # Fake data generator [https://github.com/faker-ruby/faker]
+  gem "faker"
 end
 
 group :development do
@@ -69,6 +81,12 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+
+  # Matchers for common Rails functionality [https://github.com/thoughtbot/shoulda-matchers]
+  gem "shoulda-matchers", "~> 6.0"
+
+  # Database cleaner [https://github.com/DatabaseCleaner/database_cleaner]
+  gem "database_cleaner-active_record"
 end
 
 
