@@ -9,6 +9,14 @@ Rails.application.routes.draw do
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
-  # Defines the root path route ("/")
+  # Landing page and marketing pages
   root "pages#home"
+  get "/features", to: "pages#features"
+  get "/about", to: "pages#about"
+  get "/contact", to: "pages#contact"
+
+  # Authentication pages
+  get "/login", to: "pages#login"
+  get "/register", to: "pages#register"
+  get "/dashboard", to: "pages#dashboard"
 end
