@@ -9,6 +9,14 @@ Rails.application.routes.draw do
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
+  # Users resource routes
+  resources :users do
+    member do
+      patch :activate
+      patch :deactivate
+    end
+  end
+
   # Defines the root path route ("/")
   root "pages#home"
 end
